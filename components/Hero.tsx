@@ -1,5 +1,4 @@
 import React from 'react';
-import { ViewState } from '../types';
 import { ArrowRight, Star, Clock, CheckCircle } from 'lucide-react';
 
 interface HeroProps {

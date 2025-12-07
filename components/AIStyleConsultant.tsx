@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Sparkles, Upload, Camera, Loader2, ArrowRight } from 'lucide-react';
+import { Sparkles, Camera, Loader2, ArrowRight } from 'lucide-react';
 import { analyzeStyle } from '../services/geminiService';
 import { SERVICES } from '../constants';
 

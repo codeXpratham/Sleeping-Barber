@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Service, Barber, Appointment } from '../types';
 import { SERVICES, BARBERS, TIME_SLOTS } from '../constants';
-import { Calendar, Check, Clock, User, Scissors, ChevronLeft } from 'lucide-react';
+import { Calendar, Check, Clock, ChevronLeft } from 'lucide-react';
 
 interface BookingWizardProps {
   preSelectedServiceId?: string;

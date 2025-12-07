@@ -1,7 +1,7 @@
 import React from 'react';
-import { Appointment, Service, Barber } from '../types';
+import { Appointment } from '../types';
 import { SERVICES, BARBERS } from '../constants';
-import { Calendar, Clock, User, Scissors } from 'lucide-react';
+import { Calendar, Clock, User } from 'lucide-react';
 
 interface AppointmentListProps {
   appointments: Appointment[];
