@@ -1,0 +1,7 @@
+{
+  "name": "Crown & Clipper",
+  "description": "Premium barber appointment management app with AI style consultation.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
