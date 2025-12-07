@@ -1,4 +1,4 @@
-import { Barber, Service, ServiceType } from './types';
+import { Barber, Service, ServiceType, Appointment } from './types';
 
 export const BARBERS: Barber[] = [
   {
@@ -62,4 +62,38 @@ export const SERVICES: Service[] = [
 
 export const TIME_SLOTS = [
   '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'
+];
+
+// Seed data to make the Admin Dashboard look realistic
+export const INITIAL_APPOINTMENTS: Appointment[] = [
+  {
+    id: 'demo-1',
+    userId: 'user-2',
+    serviceId: 's1',
+    barberId: 'b1',
+    date: new Date().toISOString().split('T')[0],
+    time: '10:00',
+    customerName: 'Michael Jordan',
+    status: 'completed'
+  },
+  {
+    id: 'demo-2',
+    userId: 'user-3',
+    serviceId: 's4',
+    barberId: 'b2',
+    date: new Date(Date.now() + 86400000).toISOString().split('T')[0], // Tomorrow
+    time: '14:00',
+    customerName: 'David Beckham',
+    status: 'upcoming'
+  },
+  {
+    id: 'demo-3',
+    userId: 'user-2',
+    serviceId: 's2',
+    barberId: 'b3',
+    date: new Date(Date.now() - 86400000).toISOString().split('T')[0], // Yesterday
+    time: '16:00',
+    customerName: 'Brad Pitt',
+    status: 'cancelled'
+  }
 ];

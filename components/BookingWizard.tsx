@@ -5,7 +5,8 @@ import { Calendar, Check, Clock, User, Scissors, ChevronLeft } from 'lucide-reac
 
 interface BookingWizardProps {
   preSelectedServiceId?: string;
-  onBookingComplete: (appointment: Appointment) => void;
+  // Use Omit to exclude userId as it is handled by the parent component
+  onBookingComplete: (appointment: Omit<Appointment, 'userId'>) => void;
 }
 
 type Step = 'SERVICE' | 'BARBER' | 'TIME' | 'DETAILS' | 'CONFIRMATION';
@@ -39,7 +40,8 @@ const BookingWizard: React.FC<BookingWizardProps> = ({ preSelectedServiceId, onB
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (selectedService && selectedBarber && selectedTime && customerName) {
-      const newAppointment: Appointment = {
+      // Create appointment object without userId
+      const newAppointment: Omit<Appointment, 'userId'> = {
         id: Math.random().toString(36).substr(2, 9),
         serviceId: selectedService.id,
         barberId: selectedBarber.id,

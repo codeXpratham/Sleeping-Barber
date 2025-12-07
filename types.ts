@@ -26,6 +26,7 @@ export interface Service {
 
 export interface Appointment {
   id: string;
+  userId: string; // Added to track who made the booking
   serviceId: string;
   barberId: string;
   date: string; // ISO Date string
@@ -35,4 +36,4 @@ export interface Appointment {
   status: 'upcoming' | 'completed' | 'cancelled';
 }
 
-export type ViewState = 'HOME' | 'BOOKING' | 'AI_CONSULTANT' | 'MY_APPOINTMENTS';
+export type ViewState = 'HOME' | 'BOOKING' | 'AI_CONSULTANT' | 'MY_APPOINTMENTS' | 'ADMIN_DASHBOARD';
